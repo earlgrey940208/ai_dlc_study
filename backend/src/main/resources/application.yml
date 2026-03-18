@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: table-order-backend
+  datasource:
+    url: jdbc:h2:mem:tableorder
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: dev-secret-key-for-local-development-only-change-in-prod
+  expiration: 57600000

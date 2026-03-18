@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/tableorder
+    driver-class-name: org.postgresql.Driver
+    username: tableorder
+    password: tableorder
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+jwt:
+  secret: ${JWT_SECRET:prod-secret-change-me}
+  expiration: 57600000
